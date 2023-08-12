@@ -1,0 +1,31 @@
+label {
+  font-weight: 600;
+}
+
+.card {
+  margin: 0px 40px;
+}
+
+span{
+  font-weight: 600;
+}
+
+.scrollable {
+  max-height: 493.2px; /* Ajusta esta altura según tus necesidades */
+  overflow-y: auto;
+  /* background-color: red; */
+}
+
+
+.cssAnimateDelete {
+  /* Estilos iniciales */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s;
+
+  /* Animación cuando se elimina */
+  &.animate__fadeOutUp {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

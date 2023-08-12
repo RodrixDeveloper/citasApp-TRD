@@ -1,0 +1,22 @@
+<div *ngIf="listadoCita.length === 0" class="card text-bg-light">
+    <div class="card-body">
+        <h5 class="card-title text-center">No hay citas para mostrar</h5>
+    </div>
+</div>
+
+<div class="scrollable">
+    <div *ngFor="let cita of listadoCita; let i = index"
+        class="card mb-2 animate__animated animate__bounceInRight cssAnimateDelete">
+        <div class="card-body">
+            <div class="card-text ">
+                <p><span>Nombre: </span>{{cita.nombre}}</p>
+                <p><span>Fecha: </span>{{cita.fecha}}</p>
+                <p><span>Hora: </span>{{cita.hora}}</p>
+                <p><span>Sintomas: </span>{{cita.sintomas}}</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-danger" (click)="eliminarCita(i)">ELIMINAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
